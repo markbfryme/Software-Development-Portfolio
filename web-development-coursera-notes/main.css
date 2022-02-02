@@ -5,14 +5,14 @@
 }
 * {
   color: var(--fontColor);
-  font-family: Trebuchet MS;
+  font-family: Lato;
 }
 body {
   background: var(--bg);
 }
 
 ul {
-  font-family: Trebuchet MS;
+  font-family: Lato;
 }
 
 li {
