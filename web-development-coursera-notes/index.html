@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Learning Journal</title>
+    <link rel="stylesheet" href=main.css>
+  </head>
+  <body class='dark-theme'>
+    <h1 id="top">Software Engineering Learning Journal</h1>
+    <a href="#2022-01-27">| 2022-01-27 |</a>
+    <a href="#2022-01-29">| 2022-01-29 |</a>
+    <a href="#2022-01-30">| 2022-01-30 |</a>
+    <a href="#2022-01-31">| 2022-01-31 |</a>
+    <a href="#2022-02-01">| 2022-02-01 |</a>
+    <br>
+    <br id="2022-02-01">2022-02-01
+    <ul>
+      <li>Lists
+        <ul>
+          <li>html structure that allows you to group content</li>
+          <li>&lt;li&gt; are the only elements allowed directly within an &lt;ul&gt; element</li>
+          <li>You may have unordered list element nested within a list item. The unordered list item must be within the opening and closing tags of the list item to be valid html.</li>
+          <li>If you need an ordered list, use the ordered list element &lt;ol&gt;</li>
+          <li>Ordered lists are numbered rather than bulleted while unordered lists are bulleted.</li>
+        </ul>
+      </li>
+      <li>HTML Character Entity References
+        <ul>
+          <li>Help avoid rendering issues</li>
+          <li>Can provide characters not available on the keyboard</li>
+          <li>In the below list I am representing the ampersand (&) with the word amp.</li>
+          <li>3 Characters you should always escape: &lt; (&amp;lt;), &gt; (&amp;gt;), &amp; (&amp;amp;)</li>
+          <li>Others include the copyright symbol &copy; (&amp;copy;)</li>
+          <li>Another escape character commonly used is the non-breaking space character which forces a group of words to not be broken or wrapped around. (ampnbsp;)</li>
+          <li>The nbsp entity reference should be used in place of a space between words with no spaces between the reference and the words.</li>
+          <li>The non-breaking space escape should not be misused to add spaces where margin should be added correctly.</li>
+          <li>Another commonly used character entity reference is that for quotes. This is used for more limited character encoding such as in email. &quot; (ampquot;)</li>
+        </ul>
+      </li>
+      <li>Creating Links
+        <ul>
+          <li>Links are implemented using an anchor element &lt;a href="foo.html" title="foo"&gt;Text displayed&lt;a&gt;</li>
+          <li>Internal links reference a file within a folder locally.</li>
+          <li>If there is no path, html assumes the file resides in the same directory as the parent file.</li>
+          <li>The title attribute is used for screen readers helping the visually impaired get through a webpage.</li>
+          <li>External links are no different but reference an external page usually preceded by http://</li>
+          <li>Anchor elements are both block level and inline elements. You can place a div element within an anchor element to ensure the link shows up on its own line.</li>
+          <li>In an external link you can force a new tab to be opened using the attribute target="_blank"</li>
+          <li>Fragment Identifiers
+            <ul>
+              <li>Links within the page</li>
+              <li>href attribute with element id preceded by #. &lt;a href="#id"&gt;link text&lt;a&gt; links to &lt;br&nbsp;id="id"&gt;</li>
+              <li>name attributes within and anchor element can be used in place of id attributes to create fragment identifiers</li>
+              <li>Example: &lt;h1&gt;&lt;a name="id"&gt;heading 1&lt;/a&gt;&lt;/h1&gt;</li>
+              <li>This is also convenient as it allows you to share links to a location within a page.</li>
+              <li>These links are also important for spa (single page applications).</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Displaying Images</li>
+        <ul>
+          <li>commenting a line in html with &lt;!-- blah blah --&gt; </li>
+          <li>insert images with an image tag &lt;img src="" width="" height=""&gt;</li>
+          <li>width and height are in pixels</li>
+          <br>
+          <div><img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered"></div>
+          <br>
+          <li>Always specify width and height because without it may break your layouts</li>
+        </ul>
+      <li>Module 1 Wrap Up</li>
+    </ul>
+    <a href="#top">back to top</a>
+    <br>
+    <br id="2022-01-31">2022-01-31
+    <ul>
+      <li>There are two governing bodies for html w3c and WHATWG</li>
+      <li><a href="http://www.w3c.org/TR/html5" target="_blank">www.w3c.org/TR/html5</a></li>
+      <li>Another useful website is <a href='https://caniuse.com/' target="_blank">caniuse.com</a> which you can use to see whether various browsers support a feature/technology.</li>
+      <li>Another useful tool is the w3c html validator. You can feed it website and it will validate the use of html on the site. <a href="https://validator.w3.org/" target="_blank">w3c validator</a></li>
+      <li>Statistics of browser use for compatability <a href="https://www.w3schools.com/browsers/" target="_blank">w3schools browser stats</a></li>
+      <li>Anotomy of an HTML tag
+        <ul>
+          <li>opening and closing tag</li>
+          <li>Attributes (key value pair within first element, key="value")</li>
+          <li>Using double and single quotes (interchangeably as long as they are opened and closed in pairs)</li>
+          <li>How to specify tag without an content (Same as any tag with no content between greater than less than)</li>
+          <li>Not all elements have a closing tab including breaks and horizontal rules</li>
+          <li>It is not required that tags be in all lowercase. It was for previous versions of html like xhtml.</li>
+        </ul>
+      </li>
+      <li>Basic HTML Document Structure
+        <ul>
+          <li>All html docs start with the doctype statement &lt;!DOCTYPE html&gt;</li>
+          <li>The head contains metadata about the page</li>
+          <li>meta tag is a standalone tag (no closing).</li>
+          <li>The most commonly used characterset it utf-8</li>
+          <li>&lt;meta charset="utf-8"&gt;</li>
+          <li>HTML rendering is sequential, from top to bottom.</li>
+          <li>Source code for this is in fullstack-course4&gt;examples&gt;Lecture04</li>
+          <li>HTML tags covered: html, meta, head, title, body, paragraph</li>
+        </ul>
+      </li>
+      <li>HTML Content Models
+        <ul>
+          <li>Block Level Content vs Inline Content</li>
+          <li>There are now 7 types of content.</li>
+          <li>Flow content roughly translates to block content.</li>
+          <li>Phrasing content roughly translates to inline content.</li>
+          <li>div and span are the most generic element types</li>
+          <li>The div element is the most generic block level element.</li>
+          <li>The span element is the most generic inline type element.</li>
+          <li>Explore content types here: <a href="https://www.w3.org/TR/2011/WD-html5-20110525/content-models.html" target="_blank">HTML5 Content Models</a></li>
+        </ul>
+      </li>
+      <li>Essential HTML5 Tags
+        <ul>
+          <li>Semantic: Relating to meaning in language or logic</li>
+          <li>Semantic HTML element: An element that implies some meaning to the content</li>
+          <li>Human and/or machine can understand meaning of content surrounded by a semantic element better</li>
+          <li>May help search engine ranging ie. SEO</li>
+          <li>Example: Lecture06/headings</li>
+          <li>&lt;h1&gt; is a semantic tag, it conveys that that is most important heading in the document</li>
+          <li>Section, Article, Aside, footer are all semantic elements, they help convey meaningful structure. They are all block level elements.</li>
+          <li>You could technically use div tags for all of these elements, but they convey meaning which is helpful for computers and humans in understanding the structure of the page.</li>
+        </ul>
+      </li>
+    </ul>
+    <a href="#top">back to top</a>
+    <br>
+    <br id="2022-01-30">2022-01-30
+    <ul>
+      <li>Finished setting up environment</li>
+      <li>Setup github pages</li>
+      <li>Basic git commands to commit changes</li>
+      <li>Created a subpage on github page</li>
+      <li>Browser sync is a powerful tool for visualizing changes on the fly</li>
+      <li>Started video on where to get help</li>
+      <li>Stack Overflow</li>
+      <li>jsfiddle.net</li>
+      <li>codepen.io, similar to jsfiddle but has a wider user community with some wild solutions that you can see the code for. Micah mentioned this is a website he uses to test candidates.</li>
+      <li>What is HTML?</li>
+      <li>Hypertext Markup Language</li>
+      <li> Hypertext: text which containts links to other text</li>
+      <li> Markup: annotation that tells something what content is</li>
+      <li> Language: Has its own syntax. There is a right and a wrong way to write and read it.</li>
+      <li>The three technologies that drive the web:</li>
+      <li>HTML: Structure, what are the components</li>
+      <li>CSS: Style, color, font size, font type</li>
+      <li>Javascript: Provides behavior/functionality</li>
+    </ul>
+    <a href="#top">back to top</a>
+    <br>
+    <br id="2022-01-29">2022-01-29
+    <ul>
+      <li>Starting today with the Coursera HTML/CSS/JS course.</li>
+      <li>I'm going to try the course without paying for the quizzes and projects</li>
+      <li>Recommended course reading: <a href="https://clearlydecoded.com/recommended-books" target="_blank">Recommended Reading</a></li>
+      <li><a href="https://clearlydecoded.com" target="_blank">Instructor's Website</a></li>
+      <li><a href="https://pages.clearlydecoded.com/future-material-notifications" target="_blank">Sign up here for new material notifications</a></li>
+      <li><a href="https://github.com/jhu-ep-coursera/fullstack-course4" target="_blank">All Source Code for Course</a></li>
+      <li><a href="https://github.com/jhu-ep-coursera/fullstack-course4/blob/master/FAQ.md" target="_blank"> Frequently Asked Questions</a></li>
+      <li>Get a git account (already have one)</li>
+      <li>Download and install sublime text editor 3. There is version 4 now but going to use 3 so there aren't any issues with
+        compatiblity.
+      </li>
+      <li>Install git (already have and recently updated)</li>
+      <li>Install node.js
+    </ul>
+    <a href="#top">back to top</a>
+    <br>
+    <br id="2022-01-27">2022-01-27
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=OQQ-W_63UgQ" target="_blank">Stanford NLP Course Lecture 1</a></li>
+      <li>Took a microsoft short course (44m) on building a simple website with html/css/js</li>
+      <li>See simple-website folder within this folder for result</li>
+      <li><a href="./simple-website/index.html" target="_blank">simple-website</a></li>
+      <li>Reviewed how to solve the longest common prefix using Trie, didn't implement</li>
+      <li>Reviewed Coursera Course on HTML/CSS/JS front end development, may consider taking the course at $79</li>
+      <li><a href="https://www.coursera.org/learn/html-css-javascript-for-web-developers" target="_blank">Coursera: HTML, CSS, and JS for web developers</a></li>
+      <li>Things are definitely feeling daunting at this point, but I'm still at the very beginning</li>
+      <li>Take it one day at a time and try to study at least 3-5 days per week</li>
+    </ul>
+    <a href="#top">back to top</a>
+  </body>
+</html>
