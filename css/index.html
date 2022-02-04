@@ -9,66 +9,143 @@
   </head>
   <body class='dark-theme'>
     <h1 id="top">Coursera Web Development HTML/CSS/JS Notes</h1>
-    <a href="#2022-02-01">| 2022-02-01 |</a>
+    <a href="#2022-02-02">| 2022-02-02 |</a>
     <br>
-    <br id="2022-02-01">2022-02-01
+    <br id="2022-02-02">2022-02-02
     <ul>
-      <li>Lists
+      <li>CSS</li>
         <ul>
-          <li>html structure that allows you to group content</li>
-          <li>&lt;li&gt; are the only elements allowed directly within an &lt;ul&gt; element</li>
-          <li>You may have unordered list element nested within a list item. The unordered list item must be within the opening and closing tags of the list item to be valid html.</li>
-          <li>If you need an ordered list, use the ordered list element &lt;ol&gt;</li>
-          <li>Ordered lists are numbered rather than bulleted while unordered lists are bulleted.</li>
+          <li>User experience of content matters; Structure is not enough</li>
+          <li>A cool website to checkout <a href="http://www.csszengarden.com/">csszengarden.com</a> shows how css can style exactly the same html content in wildly different ways.</li>
         </ul>
-      </li>
-      <li>HTML Character Entity References
+      <li>Anatomy of a CSS Rule
         <ul>
-          <li>Help avoid rendering issues</li>
-          <li>Can provide characters not available on the keyboard</li>
-          <li>In the below list I am representing the ampersand (&) with the word amp.</li>
-          <li>3 Characters you should always escape: &lt; (&amp;lt;), &gt; (&amp;gt;), &amp; (&amp;amp;)</li>
-          <li>Others include the copyright symbol &copy; (&amp;copy;)</li>
-          <li>Another escape character commonly used is the non-breaking space character which forces a group of words to not be broken or wrapped around. (ampnbsp;)</li>
-          <li>The nbsp entity reference should be used in place of a space between words with no spaces between the reference and the words.</li>
-          <li>The non-breaking space escape should not be misused to add spaces where margin should be added correctly.</li>
-          <li>Another commonly used character entity reference is that for quotes. This is used for more limited character encoding such as in email. &quot; (ampquot;)</li>
-        </ul>
-      </li>
-      <li>Creating Links
-        <ul>
-          <li>Links are implemented using an anchor element &lt;a href="foo.html" title="foo"&gt;Text displayed&lt;a&gt;</li>
-          <li>Internal links reference a file within a folder locally.</li>
-          <li>If there is no path, html assumes the file resides in the same directory as the parent file.</li>
-          <li>The title attribute is used for screen readers helping the visually impaired get through a webpage.</li>
-          <li>External links are no different but reference an external page usually preceded by http://</li>
-          <li>Anchor elements are both block level and inline elements. You can place a div element within an anchor element to ensure the link shows up on its own line.</li>
-          <li>In an external link you can force a new tab to be opened using the attribute target="_blank"</li>
-          <li>Fragment Identifiers
+          <li>Selector - what element type the rule will apply to
             <ul>
-              <li>Links within the page</li>
-              <li>href attribute with element id preceded by #. &lt;a href="#id"&gt;link text&lt;a&gt; links to &lt;br&nbsp;id="id"&gt;</li>
-              <li>name attributes within and anchor element can be used in place of id attributes to create fragment identifiers</li>
-              <li>Example: &lt;h1&gt;&lt;a name="id"&gt;heading 1&lt;/a&gt;&lt;/h1&gt;</li>
-              <li>This is also convenient as it allows you to share links to a location within a page.</li>
-              <li>These links are also important for spa (single page applications).</li>
+              <li>Declaration (in curly braces)
+                <ul>
+                  <li>Property</li>
+                  <li>Value</li>
+                  <li>Property: Value; pairs are separated by a colon and terminated by a semicolon.</li>
+                </ul>
+              </li>
+              <li>A rule can have many declarations.</li>
             </ul>
           </li>
+          <li>A collection of rules makes up a stylesheet.</li>
+          <li>examples lecture 12 folder: css-syntax</li>
         </ul>
       </li>
-      <li>Displaying Images</li>
+      <li>Types of selectors: Element, Class, and ID
         <ul>
-          <li>commenting a line in html with &lt;!-- blah blah --&gt; </li>
-          <li>insert images with an image tag &lt;img src="" width="" height=""&gt;</li>
-          <li>width and height are in pixels</li>
-          <br>
-          <div><img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered"></div>
-          <br>
-          <li>Always specify width and height because without it may break your layouts</li>
+          <li>Selectors can be grouped using commas.</li>
+          <li>Example: Lecture13, simple-selectors-before.html</li>
+          <li>ID selector is the least reusable since ids can only be used as a single elements attribute.</li>
+          <li>p {}</li>
+          <li>.class {}</li>
+          <li>#id {}</li>
+          <li>combined: p, .class {}</li>
         </ul>
-      <li>Module 1 Wrap Up</li>
+        <li>Combining Selectors
+          <ul>
+            <li>Combine selectors to get more targeted styling on elements.</li>
+            <li>One of the most common is an element with class ie. p.class {}, paragraph with class.</li>
+            <li>Can be used with other selectors besides element: selector.class ie .class1.class2 {}</li>
+            <li>Child Selector: article &gt; p {}. This is read from right to left. Every paragraph element that is a child of an article element will be subject to the rule. The paragraph element must be a direct child in this case.</li>
+            <li>Descendant Selector: article p {}. Again read from right to left. In this case every paragraph that is a descendent whether a direct child or further down will be subject to the rule applied.</li>
+            <li>The child and descendant selector combinations are not limited to elements. They can be used to combine any selector type.</li>
+            <li>Two combinations not covered
+              <ul>
+                <li>Adjacent Sibling Selector: (selector + selector)</li>
+                <li>General Sibling Selector: (selector ~ selector)</li>
+                <li>Instructor leaves it up to us to look these up since they are not as commonly used.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Pseudo Class Selectors
+          <ul>
+            <li>Used when combinations of selectors won't work.</li>
+            <li>Used when we want user actions to be a selector.</li>
+            <li>syntax: selector:pseudo-class {}</li>
+            <li>Covered in this course
+              <ul>
+                <li>:link</li>
+                <li>:visited</li>
+                <li>:hover</li>
+                <li>:active</li>
+                <li>:nth-child(...)</li>
+                <li>link, visited, hover are commonly used and straightforward.</li>
+                <li>nth-child is very powerful but can get complicated.</li>
+                <li>example: Lecture 15, pseudo-selectors-before.html</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Style Placement
+          <ul>
+            <li>in line styling &lt;p style="text-align: center;"&gt; I am centered!&lt;/p&gt;</li>
+            <ul>
+              <li>The least reusable way to style</li>
+              <li>The least prefered way and to be avoided</li>
+            </ul>
+            <li>The prefered way is to link to an external stylesheet</li>
+            <li>in the head of the html file create a &lt;link rel="stylesheet" href="style.css"&gt; element</li>
+            <li>This is the most reuasable way and applies to every page in a website</li>
+            <li>head styles are usually there to override external ones, but that practice is not ideal</li>
+          </ul>
+        </li>
+        <li>Conflict Resolution
+          <ul>
+            <li>Cascading style sheets use the cascading algorithm</li>
+            <li>Origin, Merge
+              <ul>
+                <li>Origin Precedence: when there is a conflict, simple rule "Last Declaration Wins"</li>
+                <li>When there is no conflict, simpler rule: "Declarations Merge"</li>
+              </ul>
+            </li>
+            <li>Inheritance
+              <ul>
+                <li>If you apply a style rule to the body tag, every descendent will inherit that style.</li>
+              </ul>
+            </li>
+            <li>Specificity
+              <ul>
+                <li>simple rule: The most specific selector combination wins</li>
+                <li>The style attribute of an element is the most specific</li>
+                <li>Order of specificity score: style, ID, Class/pseudo-class/attribute, # of elements</li>
+                <li>Another way to override specificity is to ues the !important note: p {color: green !important;}</li>
+                <li>Avoid using important unless you have to</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Text Styling
+          <ul>
+            <style>.style {font-familty: Arial, Helvetica, sans-serif;
+                  color: #00ff00;
+                  font-style: italic;
+                  font-weight: bold;
+                  font-size: 24px;
+                  text-transform: capitalize;
+                  text-align: center;}
+                  }
+            </style>
+            <li>font-family: Arial, Helvetica, sans-serif;</li>
+            <li>color: #00ff00;</li>
+            <li>font-style: italic;</li>
+            <li>font-weight: bold;</li>
+            <li>font-size: 24px;</li>
+            <li>text-transform: capitalize;</li>
+            <li>text-align: cetner;</li>
+            <li class="style"> This text is of the above style!</li>
+          </ul>
+        </li>
+        
+      </li>
     </ul>
     <a href="#top">back to top</a>
     <br>
   </body>
 </html>
+
