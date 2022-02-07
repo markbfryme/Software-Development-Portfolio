@@ -19,6 +19,13 @@ li {
   list-style: circle;
 }
 
+img {
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
 .list {
   list-style: square;
 }
