@@ -5,7 +5,7 @@
 }
 * {
   color: var(--fontColor);
-  font-family: Segoe UI;
+  font-family: Segoe UI, sans-serif;
 }
 body {
   background: var(--bg);
