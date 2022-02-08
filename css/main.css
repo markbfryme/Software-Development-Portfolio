@@ -11,6 +11,12 @@ body {
   background: var(--bg);
 }
 
+@media (max-width: 1200px) {
+  body {
+    width: 90%;
+  }
+}
+
 ul {
   font-family: Segoe UI, sans-serif;
 }
@@ -24,6 +30,11 @@ img {
   padding: 5px;
   border: 2px solid white;
   border-radius: 5px;
+}
+@media (max-width: 600px) {
+  img {
+    width: 95%;
+  }
 }
 
 .list {

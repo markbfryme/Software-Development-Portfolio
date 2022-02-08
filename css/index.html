@@ -11,6 +11,7 @@
     <h1 id="top">Coursera Web Development HTML/CSS/JS Notes</h1>
     <a href="#2022-02-02">| 2022-02-02 |</a>
     <a href="#2022-02-07">| 2022-02-07 |</a>
+    <a href="#2022-02-08">| 2022-02-08 |</a>
     <br>
     <br id="2022-02-02">2022-02-02
     <ul>
@@ -215,6 +216,52 @@
               </ul>
             </li>
         </ul>
+    </li>
+    <a href="#top">back to top</a>
+    <br id="2022-02-08">2022-02-08
+    <li>Lecture 22, Part 1: Relative and Absolute Element Positioning
+      <ul>
+        <li>Previously we talked about alternative positioning scheme: floating elements. It is alternatate to the normal flow of the document.</li>
+        <li>Static positioning is absolute and ignores other positioning.</li>
+        <li>With relative positioning an element is positioned relative to its position in the normal document flow.</li>
+        <li>Positioning CSS (offset) properties are: top, bottom, left, right.</li>
+        <li>With relative positioning the element is NOT taken out of normal document flow. Even if it is moved, its original spot is preserved.</li>
+        <li>p {position: relative; top: 50px; left: 50px;</li>
+        <li>The above properties should be red 50px "from the top" and 50px "from the left.</li>
+        <li>You can also use negative values to move in the opposite direction.</li>
+        <li>When a container element is offset using absolute positioning, every element within that container element is offset by that amount.</li>
+        <li>examples/Lecture 22/positioning-before.html</li>
+        <li>Four p elements within a div</li>
+        <li>If we want positioning to be relative to a containing element we should set the position: relative of the ancestor element.</li>
+        <li>By default the html element positioning is set to relative. It is the only element that has the positioning set to relative while all others are set to static.</li>
+        <li>Summary
+          <ul>
+            <li>Static positioning is default for all elements, except html</li>
+            <li>Relative positioning offsets the element relative to its normal document flow position.</li>
+            <li>Absolute positioning is relative to the closest ancestor which has positioning set to a non-static value.</li>
+            <li>Offsetting the relative container element offsets all of its contents as well. This is convenient if we want to position a group of elements.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Media Queries
+      <ul>
+        <li>example: @media (max-width: 800px) {...}</li>
+        <li>If the statement within the parenthesis is true, the style within the curly braces is applied.</li>
+        <li>max-width, min-width, orientation, screen, print</li>
+        <li>features max-width and min-width are the most common.</li>
+        <li>Logical operators such as and or , (for or) to combine these operators.</li>
+        <li>and is the most common</li>
+        <li>Before you get into the media queries you would have a base style. Then you reset those with the media query properties.</li>
+        <li>Its important that you don't have overlapping boundaries on your media queries. ie if one ends at 1200px another should end at 1199px rather than 1200px.</li>
+        <li>examples/Lecture 23/media-queries-before.html</li>
+        <li>There is a base style applied before the media queries.</li>
+        <li>Each paragraph has some base styling</li>
+        <li>Large devices only: @media (min-width: 1200px) {#p1 {width: 80%}}</li>
+        <li>Medium devices only: @media (min-width: 992px) and (max-width:1199px) {#p1 {width: 50%;} #p2 {width: 100px; height: 100px;}}</li>
+        <li>The first media query and second do not overlap. The second uses the combinator "and"</li>
+        <li>I added a media query to this page to resize the images to fit 95% of the screen for devices with a minimum width of 600px. The images should fit 95% of a smartphone device etc but be their originally set width for larger devices.</li>
+      </ul>
     </li>
     <a href="#top">back to top</a>
   </body>
