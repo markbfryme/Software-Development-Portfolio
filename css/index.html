@@ -167,6 +167,53 @@
             <li>examples/Lecture19/box-model-after.html shows various attributes for the box model.</li>
             <li>One of the most important attributes is the box-sizing: border-box; attribute this tells the browser to set the width of the everything within the border box to the designated width rather than the content box.</li>
             <li><img src="box_chrome.png" width=500px></li>
+            <li>Box sizing: is not an inherited property. If you set it to border-box in the body it will not be inherited by the children or descendents of the body element.</li>
+            <li>* selector places the property in every element.</li>
+            <li>border-box is new as of CSS3. Remember to check <a href="http://caniuse.com" target="_blank">caniuse.com</a> to see what browsers support it.</li>
+            <li>margin is cummulative side to side, not cummulative, they collapse, top to bottom. The larger is used.</li>
+            <li>You may notice that there are margins that you didn't specify in your website. These may be default browser settings. You can reset them using the * selector to apply 0 margin to all elements at the beginning of your css stylsheet.</li>
+            <li>Summary
+              <ul>
+                  <li>Box model - essential to understand</li>
+                  <li>Prefer box-sizing: border-box;</li>
+                  <li>The * (universal) selector</li> 
+                  <li>Cumulative (horizontal) and collapsing (mostly vertical) margins</li>
+                  <li>For vertical, collapsing, the larger of the two margins is taken.</li>
+                  <li>Content overflow and the overflow property. overflow: auto; Automatically makes the box have a scroll bar where needed.</li>
+              </ul>
+            </li>
+            <li>The Background Property
+                <ul>
+                    <li>background-color: blue;</li>
+                    <li>background-image: url("relative_to_css.png");</li>
+                    <li>background-repeat: ...</li>
+                    <li>repeat, no-repeat etc.</li>
+                    <li>Image is on top of color.</li>
+                    <li>You can also just use the property, background: url() no-repeat right center;</li>
+                    <li>This will override other outside background commands.</li>
+                </ul>
+            </li>
+            <li>Position Elements by Floating
+              <ul>
+                <li>Floating element margins don't collapse</li>
+                <li>When you float elements it takes them out of the normal document flow</li>
+                <li>Use the clear property to clear the float property and resume the regular document flow.</li>If you float: left; one element you use clear: left; to clear the float: left;
+                <li>
+                  You can also use clear: both;
+                </li>
+                <li>how to make a two column document:</li>
+                <li>Two-columen-before.html</li>
+                <li>Summary
+                    <ul>
+                      <li>Floating elements can produce very flexible layouts</li>
+                      <li>Floats are taken out of normal document flow</li>
+                      <li>FLoats don't have vertical margin collapse
+                      </li>
+                      <li>To resume normal document flow, use the clear property</li>
+                    </ul>
+                </li>
+              </ul>
+            </li>
         </ul>
     </li>
     <a href="#top">back to top</a>
