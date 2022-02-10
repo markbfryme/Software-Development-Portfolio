@@ -285,6 +285,50 @@
         <li>Grids can be nested within other grids.</li>
         <li>example/Lecture 24/responsive-before</li>
         <li>The above example lays out a simple responsive framework.</li>
+        <li>Part 2:</li>
+        <li>We went over the need and idea of a responsive design</li>
+        <li>We went over the 12-column grid layout.</li>
+        <li>We use % to achieve fluid width. 1/12 = 8.33%</li>
+        <li>We used media queries to define different column structure for large and medium devices</li>
+        <li>We use a special viewport meta tag to turn off default mobile zooming: </li>
+        <li>name="viewport" content="width=device-width, initial-scale=1"</li>
+      </ul>
+    </li>
+    <li>Introduction to Bootstrap
+      <ul>
+        <li>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</li>
+        <li>Mobile first in its purest form means that you code the mobile site first then the desktop</li>
+        <li>Either way... Mobile First == PLAN for mobile from the start</li>
+        <li>Your CSS Framework should be mobile ready (Bootstrap)</li>
+        <li>The #1 complaint of bootstrap is that it is too big and too bloated</li>
+        <li>There are a lot of features you will probably never use but you can use selective download</li>
+        <li>You can write your own framework that is more targeted/smaller, but it will take you a LOT longer to write it</li>
+        <li>The engineers at twitter wrote this and took a lot of time and effort to address details carefully...</li>
+      </ul>
+    </li>
+    <li>Introduction to Bootstrap: Part 2
+      <ul>
+        <li>Download Bootstrap</li>
+        <li>Download JQuery 2.x</li>
+        <li>Intro to the most popular project on GitHub</li>
+        <li>Mobile First - importance of planning for mobile from the start</li>
+        <li>Barbones Bootsrap web page</li>
+      </ul>
+    </li>
+    <li>The Bootstrap Grid System
+      <ul>
+        <li>First the content must be inside a container (or container-fluid)</li>
+        <li>Next the row class creates horizontal groups of columns, it applies negative left/right margins</li>
+        <li>So the content aligns:</li>
+        <li><img src="why_neg_row_marg.png"></li>
+        <li>now the column class: col-SIZE-SPAN</li>
+        <li>SIZE - screen width range identifier (lg, md, sm)</li>
+        <li>columns will collapse (ie stack) below that width unless another rule applies</li>
+        <li>SPAN - How many columns the element should span (1 through 12)</li>
+        <li>You can use divs as shown or you can use header or nav elements to contain container and row elements respectively</li>
+        <li>Structure Bootstrap expects: Needs to include .container or .container-fluid, All columns must be inside .row</li>
+        <li>SIZE identifier identifies at which breakpoint specified column spans will be ignored and all elements will collapse (or stack)</li>
+        <li>If no other rules apply, specifying col-xs-... will keep that layout no matter what the size of the screen</li>
       </ul>
     </li>
     <a href="#top">back to top</a>
