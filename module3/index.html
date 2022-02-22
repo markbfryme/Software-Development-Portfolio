@@ -117,7 +117,17 @@
     <br>
     <li>Lecture 34: Coding the Jumbotron
       <ul>
-        <li></li>
+        <li>We first added the background image within an img tag in our html file inline for the extrasmall configuration</li>
+        <li>We added the class img-responsive so that it is sized to the size of the extra small screen since this can't be done with css background image very well</li>
+        <li>We next added the backgrond image as a background image in our styles.css file for the large screen configuration</li>
+        <li>We repeated adding images for the medium and small screen sizes</li>
+        <li>Adding them with @media queries ensures that only the screen size specific image is downloaded. The extra small image is always downloaded but this is inconsequential since it is small</li>
+        <li>Next we'll fix the image sizing of the extra small image since it has incorrect borders etc</li>
+        <li>We had an issue with left and right padding on the image</li>
+        <li>This was due to specificity of two classes .container .jumbotron, so we just needed to add the .container class to our element selector</li>
+        <li>Probably a good idea to add the additional class selector to each selector that contains .jumbotron</li>
+        <li>We see that we are specifiying box shadow and border in all media queries so we can take this out to a more general specifier outside of the media queries</li>
+        <li>Our jumbotron is now complete</li>
       </ul>
     </li>
   </body>
