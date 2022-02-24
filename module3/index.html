@@ -18,6 +18,7 @@
     <a href="#2022-02-21">| 2022-02-21 |</a>
     <a href="#2022-02-22">| 2022-02-22 |</a>
     <a href="#2022-02-23">| 2022-02-23 |</a>
+    <a href="#2022-02-24">| 2022-02-24 |</a>
     <br>
     <br id="2022-02-10">2022-02-10
     <li>Module 3
@@ -175,6 +176,24 @@
             <li>Part 2:</li>
             <li>We made the tile go to 3 across and 2 across for md and sm screens</li>
             <li>We made a custom class selector for xxs screens so that tiles stack once we hit 479px</li>
+        </ul>
+    </li>
+    <a href="#top">Back to Top</a>
+    <div></div>
+    <br id="2022-02-24">2022-02-24
+    <br>
+    <li>Coding the individual menu item pages
+        <ul>
+            <li>We look at our mockup and see we have a grid of individual items that span 6 columns each. Within each of those there are two items, and image that spans about 5 columns and a description that spans about 7 columns.</li>
+            <li>Looking back at the menu categories page we notice there is nothing indicating that we are actively on the menu categories page. We add the class .active to our menu button, a bootstrap class, that will show the user that that selection is active. This makes the button highlighted showing the user that it is currently selected.</li>
+            <li>We copied the menu-categories page as a single-category page.</li>
+            <li>We mad a row class for the full grid and a row class div for the single item</li>
+            <li>We use col-sm-5 and col-sm-7 so that for anything sm or above we will have that layout but we're ok with it stacking below sm</li>
+            <li>We didn't make the image for the item responsive since it is a pretty small image already and shouldn't need to scale with device size.</li>
+            <li>I had an extrea &lt;/div&gt; that was throwing everything off. Fixed.</li>
+            <li>Part 2: Styling the html from part 1</li>
+            <li>We added styling for the image and description</li>
+            <li>We had to insert class selectors within the xs media query to have the image and description align in the center using margin auto for the image and text-align for the descrptions</li>
         </ul>
     </li>
   </body>
