@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursera Web Development HTML/CSS/JS Notes</title>
+    <link rel="stylesheet" href=./main.css>
+  </head>
+  <body class='dark-theme'>
+    <h1 id="top">Coursera Web Development HTML/CSS/JS Notes</h1>
+    <div><h2>Module 4: Intro to Javascript</h2></div>
+    <div><a href="../site/">Home</a></div>
+    <a href="#2022-02-10">| 2022-03-04 |</a>
+    <br>
+    <br id="2022-02-10">2022-03-04
+    <li>Module 4
+      <ul>
+        <li>we are going to concentrate not only on the “how” but also on the “why”, so you are empowered by the Javascript language features, not confused by them. We’ll cover just about everything - from common language constructs and Javascript types to objects, functions, arrays, closures, and scope isolation.</li>
+        <li>Javascript is very powerful but often misunderstood</li>
+        <li>you can start sublime text from the command line in a given directory so that you don't load a large amount of unnecessary files into memory</li>
+        <li>Search google for how to do the above "launch sublime 3 from cmd in windows"</a></li>
+        <li>You can also just open a folder within sublime</li>
+        <li>Chrome developer tools: we will now use the Console tab</li>
+        <li>We can put script tags within the head of the html file or an external file you can specify a src="" within the tags</li>
+        <li>A script tag always requires a closing script tag.</li>
+        <li>Something to keep in mind: the Javascript engine inside the browser is a single threaded environment. It is also a sequential execution environment.</li>
+        <li>You can also define javascript right before the body of the html file ends.</li>
+        <li>In summary you can define javascript in the head or the body and directly in a script tag or using a script tag with a src attribute that links to an external .js file.</li>
+        <li>Lecture 41: Part 1:</li>
+        <li>Variable definitions start with var</li>
+        <li>No types are declared, JS is dynamically typed language</li>
+        <li>To define a function you start with "function" followed by the function name followed by parentheses and curly braces</li>
+        <li>function a () {...} </li>
+        <li>You can also define a variable set equal to a function with no name</li>
+        <li>after defined you invoke or execute a function by taking the name followed by parentheses a();</li>
+        <li>arguments are defined without 'var'</li>
+        <li>function compare (x,y) {</li>
+        <li>  return x &gt; y;</li>
+        <li>}</li>
+        <li>You can legally call mixed types or nothing in the function even if it doesn't make sense with respect to the function</li>
+        <li>Functions signify a new scope</li>
+        <li>Variables and functions defined in the global scope are available everywhere</li>
+        <li>varables and functions defined within functions (aka lexical) are available only within that function</li>
+        <li>Scope Chain:</li>
+        <li>Everything in Javascript is executed in an Execution Context</li>
+        <li>Function invocation creates a new Execution Context</li>
+        <li>Each Execution Context has:
+          <ul>
+            <li>Its own Variable Environment</li>
+            <li>Special 'this' object</li>
+            <li>Reference to its Outer Environment</li>
+          </ul>
+        </li>
+        <li>Global scope doesn't have a reference to its outer environment since it is the outermost</li>
+        <li>If a variable is referenced it will be searched for in its current scope then outer references in sequentially outward order until the global scope is reached. If not found the variable is undefined.</li>
+        <li><img src="./scope.png"></li>
+        <li>We can find and example in: examples/Lecture41</li>
+      </ul>
+    </li>
+    <a href="#top">Back to Top</a>
+  </body>
+</html>
+

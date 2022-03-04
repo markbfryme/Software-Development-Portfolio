@@ -1,0 +1,299 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"menu",
+				"menu-dropdown"
+			],
+			[
+				"men",
+				"menu-tiles"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"col",
+				"collapsable-nav"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"nab",
+				"navbar-toggle"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"nav",
+				"navbar-toggle"
+			],
+			[
+				"menu-item-de",
+				"menu-item-description"
+			],
+			[
+				"menu-item",
+				"menu-item-tile"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"text",
+				"text-transform\tproperty"
+			],
+			[
+				"backgrou",
+				"background-color\tproperty"
+			],
+			[
+				"fon",
+				"font-size\tproperty"
+			],
+			[
+				"ba",
+				"background-position\tproperty"
+			],
+			[
+				"li",
+				"li\tTag"
+			],
+			[
+				"box-",
+				"box-shadow\tproperty"
+			],
+			[
+				"box",
+				"box-shadow\tproperty"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"max",
+				"max-width\tproperty"
+			],
+			[
+				"font",
+				"font-family\tproperty"
+			],
+			[
+				"padding",
+				"padding-top\tproperty"
+			],
+			[
+				"cl",
+				"clear\tproperty"
+			],
+			[
+				"align",
+				"align-content\tproperty"
+			],
+			[
+				"lorem",
+				"lorem\tLorem ipsum"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"get pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Mark/Documents/front_end/coursera-test/module4"
+	],
+	"file_history":
+	[
+		"/C/Users/Mark/Documents/front_end/coursera-test/site/main.css",
+		"/C/Users/Mark/Documents/front_end/coursera-test/site/index.html",
+		"/C/Users/Mark/Documents/front_end/module3-solution/css/styles.css",
+		"/C/Users/Mark/Documents/front_end/module3-solution/.gitignore",
+		"/C/Users/Mark/Documents/front_end/module3-solution/index.html",
+		"/C/Users/Mark/Documents/front_end/module3-solution/README.md",
+		"/C/Users/Mark/Documents/front_end/m3-website/index.html",
+		"/C/Users/Mark/Documents/front_end/m3-website/menu-categories.html",
+		"/C/Users/Mark/Documents/front_end/m3-website/single-category.html",
+		"/C/Users/Mark/Documents/front_end/m3-website/css/styles.css",
+		"/C/Users/Mark/Documents/front_end/coursera-test/module3/index.html",
+		"/C/Users/Mark/Documents/front_end/fullstack-course4/examples/Lecture32/after/index.html",
+		"/C/Users/Mark/Documents/front_end/coursera-test/index.md",
+		"/C/Users/Mark/Documents/front_end/coursera-test/web-development-coursera-notes/index.html",
+		"/C/Users/Mark/Documents/front_end/module2-solution/css/main.css",
+		"/C/Users/Mark/Documents/front_end/coursera-test/css/index.html",
+		"/C/Users/Mark/Documents/front_end/blue_tape.txt",
+		"/C/Users/Mark/Documents/front_end/coursera-test/css/main.css",
+		"/C/Users/Mark/Documents/front_end/module2-solution/index.html",
+		"/C/Users/Mark/Documents/front_end/fullstack-course4/examples/Lecture26/grid-before2.html",
+		"/C/Users/Mark/Documents/front_end/module2-solution/main.css",
+		"/C/Users/Mark/Documents/front_end/coursera-test/web-development-coursera-notes/main.css",
+		"/C/Users/Mark/Documents/front_end/software_learning_journal/index.html",
+		"/C/Users/Mark/Documents/front_end/software_learning_journal/Software Learning Journal.html",
+		"/C/Users/Mark/Documents/front_end/Software Learning Journal.html"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 40.8
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "module4-notes.sublime-project",
+	"replace":
+	{
+		"height": 52.8
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 263.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
