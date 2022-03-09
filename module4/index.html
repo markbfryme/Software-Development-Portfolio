@@ -13,6 +13,7 @@
     <div><a href="../site/">Home</a></div>
     <a href="#2022-03-04">| 2022-03-04 |</a>
     <a href="#2022-03-05">| 2022-03-05 |</a>
+    <a href="#2022-03-08">| 2022-03-08 |</a>
     <br>
     <br id="2022-02-10">2022-03-04
     <li>Module 4
@@ -77,7 +78,7 @@
         </li>
       </ul>
     </li>
-    <a href="#top">Bac to Top</a>
+    <a href="#top">Back to Top</a>
     <br>
     <br id="2022-03-08">2022-03-08
     <li>Lecture 42, Par1: Javascript Types
@@ -109,6 +110,86 @@
         </li>
       </ul>
     </li>
+    <a href="#top">Back to Top</a>
+    <br>
+    <br id="2022-03-09">2022-03-09
+    <div></div>
+    <li>Lecture 43, Part 1: Common Language Constructs
+      <ul>
+        <li>Javascript allows you to concatenate strings on the fly</li>
+        <li>var string = "Hello";</li>
+        <li>string += " World";</li>
+        <li>string is now "Hello World"</li>
+        <li>You can also concatenate within the log function ie console.log(string + "!")</li>
+        <li>Regular math operators...</li>
+        <li>console.log((5 + 4)/ 3); will log 3</li>
+        <li>Undefined variables return NaN</li>
+        <li>Equalities</li>
+        <li>if (x==y) {</li>
+        <li>    console.log("x=y")</li>
+        <li>}</li>
+        <li>Be aware of type coercion. Javascript will convert types and return True for something like x = 4, y = '4' where one value is a string and the other is a number</li>
+        <li>If you don't want coercion to occur, use strict equality using triple =, ===. It will first check type.</li>
+      </ul>
+    </li>
+    <li>Lecture 43, Part 2: Common Language Constructs
+      <ul>
+        <li>What does Javascript consider Boolean True or Boolean False.</li>
+        <li>False: false, null, undefined, "", 0, NaN</li>
+        <li>|| is the or operator in Javascript ie if(false || null)</li>
+        <li>Javascript has wrapper functions like Boolean() that you can check true/false</li>
+        <li>Boolean(null); ... false</li>
+        <li>Boolean("Hello world!"); ... true</li>
+        <li>True: true, "hello", 1, -1, "false", any number that is not 0, any string that has a value</li>
+        <li>&& is the logical and operator, both on the left and right must be true else false</li>
+      </ul>
+    </li>
+    <li>Lecture 43, Part 3: Common Language Constructs
+      <ul>
+        <li>Best practice for {} style</li>
+        <li>The established best practice for Javascript is to put the opening curly brace on the same line of the declaration.</li>
+        <li>Sidenote: Its generally best practice to put semicolons at the end of statements.</li>
+        <li>for loop
+          <ul>
+            <li>for (var i = 0; i < 10; i++)</li>
+            <li>Initialization, condition, increment/decrement</li>
+            <li>i could also be declared above the for statement and in that case you would simply put i = 0 in the initialization.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Summary
+      <ul>
+        <li>String concatenation</li>
+        <li>Math operations</li>
+        <li>Type coercion</li>
+        <li>Regular (==) and Strict (===) equality</li>
+        <li>What is true and what is false in Javascript</li>
+        <li>Opening curly brace placment (NOT just style)</li>
+        <li>Always place semicolons at the end of statements</li>
+        <li>Basic for loop syntax</li>
+      </ul>
+    </li>
+    <li>Lecture 44: Handling Default Values
+      <ul>
+        <li>We can create a default value such that if a value is not provided we will not get an undefined value</li>
+        <li>if (sideDish === undefined) {</li>
+        <li>    sideDish === "whatever!"</li>
+        <li>{</li>
+        <li>Shortcut: sideDish = sideDish || "whatever!";</li>
+        <li>each gets coerced into a Boolean value</li>
+        <li>if sideDish is undefined it will pass False and move to the other side of the or logical operator</li>
+        <li>You will see this construct in a lot of professional code.</li>
+      </ul>
+    </li>
+    <li>Got 50% on the quiz on the first try</li>
+    <li>The question that tripped me up:</li>
+    <li>var x = 10;</li>
+    <li>if ( (null) || (console.log("Hello")) || x > 5 ) {</li>
+    <li>    console.log("Hello");</li>
+    <li>}</li>
+    <li>I said that "Hello" would be logged 1 time when in reality it will be logged twice.</li>
+    <li>null will return false, the second condition will log "Hello" to the console and return undefined which will return fales, x > 5 will return true and will move into the if statement and log "Hello" to the console a second time.</li>
   </body>
 </html>
 
