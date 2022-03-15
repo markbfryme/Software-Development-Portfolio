@@ -270,16 +270,98 @@
       </ul>
     </li>
     <br>
-    <br id="2022-03-13">2022-03-13
+    <br id="2022-03-13">2022-03-13 and 2022-03-15
     <div></div>
     <li>Lecture 48: Function Constructors, prototype, and 'this' Keyword
       <ul>
-        <li>this points to the global window object</li>
-        <li>this.myName creates the property on the global window</li>
-        <li>If we wanted to use a function to encapsulate data in an object we need a function constructor</li>
+        <li>'this' points to the global window object</li>
+        <li>Setting a property, this.myName, creates the property on the global window object</li>
+        <li>If we wanted to use a function to encapsulate data in a specific object we need a function constructor</li>
         <li>Function constructors, convention is to capitalize the first letter</li>
         <li>Creates an object in a special way executing a function with the special "new" keyword</li>
-        
+        <li>
+          <pre class="line-numbers">
+            <code class="language-javascript">
+              function Circle (radius) {
+                this.radius = radius;
+              }
+
+              var myCircle = new Circle(10);
+              console.log(myCircle);
+            </code>
+          </pre>
+        </li>
+        <li>When you invoke a function with the new keyword, it makes 'this' point to the object that was created.</li>
+        <li>The line var myCircle = new Circle(10) is a function constructor that creates an object executing a function in a special way.</li>
+        <li>You can't return anything from the function constructor</li>
+        <li>Methods are functions that are set on properties of objects</li>
+        <li>
+          <pre class="line-numbers">
+            <code class="language-javascript">
+              function Circle (radius) {
+                this.radius = radius;
+
+                this.getArea =
+                  function () {
+                    return Math.PI * Math.pow(this.radius, 2);
+                  };
+              }
+
+              var myCircle = new Circle(10);
+              console.log(myCircle.getArea());
+            </code>
+          </pre>
+        </li>
+        <li>This will create a get.Area every time a Circle object is created. We really just want to create it once and have all the Circle objects share it. We can do that by using a prototype</li>
+        <li>
+          <pre class="line-numbers">
+            <code class="language-javascript">
+              function Circle (radius) {
+                this.radius = radius;
+              }
+              Circle.prototype.getArea =
+                function () {
+                  return () {
+                    return Math.PI * Math.pow(this.radius, 2);
+                  }
+                }
+
+              var myCircle = new Circle(10);
+              console.log(myCircle);
+
+              var myOtherCircle = new Circle(20):
+              console.log(myOtherCircle);
+            </code>
+          </pre>
+        </li>
+        <li>You don't want to put the Circle.prototype.getArea within the function. That would waste processing time.</li>
+        <li>Make sure you don't forget the 'new' keyword</li>
+        <li>If you omit the 'new' keyword the funciton will return undefined</li>
+        <li>Remember to make function constructor names Capitalized as a reminder that it is a funciton constructor</li>
+        <li>Lecture 49: Object Literals and the 'this' Keyword</li>
+        <li>examples/Lecture49 folder</li>
+        <li>
+          <pre>
+            <code class="language-javascript">
+              var literalCircle = {
+                radius: 10,
+
+                getArea: function() {
+                  console.log(this);
+                  return Math.PI * Math.pow(this.radius, 2);
+                };
+              };
+
+              literalCircle.getArea();              
+            </code>
+          </pre>
+        </li>
+        <li>Why does this work?</li>
+        <li>When you create an object literal you are effectively stating that it is a new object</li>
+        <li>Something to be aware of, if you create a function within this function it will create this.property to the global object</li>
+        <li>To avoid this we set it as self.property...</li>
+        <li>Is this a bug or is it intended (who knows)</li>
+        <li>Supposedly fixed in new version of javascript</li>
       </ul>
     </li>
   </body>
