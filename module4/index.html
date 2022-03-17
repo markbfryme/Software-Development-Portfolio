@@ -18,6 +18,7 @@
     <a href="#2022-03-10">| 2022-03-10 |</a>
     <a href="#2022-03-11">| 2022-03-11 |</a>
     <a href="#2022-03-13">| 2022-03-13 |</a>
+    <a href="#2022-03-16">| 2022-03-16 |</a>
     <br>
     <br id="2022-02-10">2022-03-04
     <li>Module 4
@@ -269,6 +270,7 @@
         </li>
       </ul>
     </li>
+    <a href="#top">Back to Top</a>
     <br>
     <br id="2022-03-13">2022-03-13 and 2022-03-15
     <div></div>
@@ -362,6 +364,113 @@
         <li>To avoid this we set it as self.property...</li>
         <li>Is this a bug or is it intended (who knows)</li>
         <li>Supposedly fixed in new version of javascript</li>
+      </ul>
+    </li>
+    <a href="#top">Back to Top</a>
+    <br>
+    <br id="2022-03-16">2022-03-16
+    <div></div>
+    <li>Lecture 50, Part 1: Arrays
+      <ul>
+        <li>examples/Lecture50</li>
+        <li>var array = new Array();</li>
+        <li>array[0] = "Yaakov";</li>
+        <li>array[1] = 2;</li>
+        <li>array[2] = function (name) {
+        console.log("Hello" + name);
+        };</li>
+        <li>array[3] = {course: "HTML, CSS & JS"};</li>
+        <li>console.log(array);</li>
+        <li>console.log(array[1]);</li>
+        <li>Javascript is unique in that you can have different types in a single array</li>
+        <li>You can use the square brackets to access specific elements in the array</li>
+        <li>you can execute the function in position 3, array[2](array[0]); ... Hello Yaakov</li>
+        <li>You can also create an array with the shorthand notation:</li>
+        <li>var names = ["Yaakov", "John", "Joe"];</li>
+        <li>We can loop through the array</li>
+        <li>for (var i = 0; i < names.length; i++) {
+          console.log("Hello " + names[i]);
+        }</li>
+        <li>They can also be sparse, which means you can specify names[100] = "John"</li>
+        <li>In this case you will get undefined for the 97 values from names[3] through names[99] and then John for names[100]</li>
+        <li>(not every position in the array needs to be defined)</li>
+      </ul>
+    </li>
+    <li>Lecture 50, Part 2: Arrays
+      <ul>
+        <li>There is an issue when using a certain for loop for arrays</li>
+        <li>var names2 = ["Yaakov", "John", "Joe"];</li>
+        <li>var myObj = {
+        name: "Yaakov",
+        course: "HTML/CSS/JS",
+        platform: "Coursera"
+        };</li>
+        <li>special for loop</li>
+        <li>for (var prop in myObj) {
+        console.log(prop + ": " + myObj[prop]);
+        }</li>
+        <li>Now lets try that with names2</li>
+        <li>for (var name in names2) {
+        console.log("Hello " + names2[name]);
+        }</li>
+        <li>names2.greeting = "Hi!";</li>
+        <li>this became a property of the array and will get looped over even though it doesn't have much to do with the other data in the array</li>
+        <li>Hello Yaakov  <br>
+            Hello John    <br>  
+            Hello Joe     <br>
+            Hello Hi!</li>
+      </ul>
+    </li>
+    <li>Lecture 51: Closures
+      <ul>
+        <li>Without closures something like AJAX wouldn't be possible</li>
+        <li>examples/Lecture51</li>
+        <li>function makeMultiplier (multiplier) {
+              return (
+                funciton (x) {
+                  return multiplier * x;
+                }
+              );
+            }
+        </li>
+        <li>var doubleAll = makeMultiplier(2);</li>
+        <li>console.log(doubleAll(10));</li>
+        <li>This is a function constructor that will first make a function called doubleAll with the multiplier 2</li>
+        <li>It will then log 2*10... 20</li>
+        <li>You can insert a new function before the return to log the multiplier...it will first look inside the function for multiplier and it will be undefined, then it will look in makeMultiplier and find 2</li>
+        <li>doubleAll </li>
+        <li>function (x)... is returned but not executed...</li>
+        <li>When a function is returned inside a function javascript preserves its outer lexical environment memory space so that the function can produce what it needs to</li>
+        <li>Javascript in this case will look for multiplier in the function and then out to the outer lexical environment</li>
+        <li>In this case Javascript has trapped or closed in the lexical environment in memory for later reference</li>
+        <li>... and that's how closures work</li>
+      </ul>
+    </li>
+    <li>Lecture 52, Part 1: Fake Namespaces
+      <ul>
+        <li>examples/Lecture52</li>
+        <li>loading multiple javascript libraries</li>
+        <li>...</li>
+        <li>each of 2 scripts defines a global variable with two different values</li>
+        <li>To avoid stepping on each others feet we can use namespaces, basically create variables and functions within objects as properties to separate them...</li>
+      </ul>
+    </li>
+    <li>Lecture 52, Part 2: Immediately Invoked Function Expressions (IIFEs)
+      <ul>
+        <li>Sometimes you just want the script to execute the funciton immediately</li>
+        <li>Replaced greeting with variable greeting, that will be scoped to global, this will give us the original problem again</li>
+        <li>instead of var a = function () {};</li>
+        <li>(function () {};)();... this is in IIFE</li>
+        <li>You can wrap a whole block in this so that it would be immediately executed.</li>
+        <li>If you have an object that isn't in the local context you can place it in the window object: (function (windows) {... window.object = object ...})(window);</li>
+      </ul>
+    </li>
+    <li>Module 4 Solution
+      <ul>
+        <li>Worked through the Module 4 Solution on 3/17/2022</li>
+        <li>Repaired a series of javascript scripts by adding IIFEs, exposing objects to the global scope, and implementing for loops and if statements</li>
+        <li>The work is contained here <a href="https://github.com/markbfryme/module4-solution" target="blank">Module 4 - Solution</a></li>
+        <li>Module 4 Complete, on to the 5th and final Module!</li>
       </ul>
     </li>
   </body>
