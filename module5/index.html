@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursera Web Development HTML/CSS/JS Notes</title>
+    <link rel="stylesheet" href=./main.css>
+  </head>
+  <body class='dark-theme'>
+    <h1 id="top">Coursera Web Development HTML/CSS/JS Notes</h1>
+    <div><h2>Module 5: Building Web Applications with Javascript</h2></div>
+    <div><a href="../site/">Home</a></div>
+    <a href="#2022-03-18">| 2022-03-18 |</a>
+    <br>
+    <br id="2022-03-18">2022-03-18
+    <li>Module 5: Building Web Applications with Javascript
+      <ul>
+        <li>We are going to learn how to use Javascript to dynamically update website elements</li>
+        <li>We'll learn how to use AJAX to pull data from a server</li>
+      </ul>
+    </li>
+    <li>Lecture 53, Part 1: DOM Manipulation
+      <ul>
+        <li>Document Object Model Manipulation</li>
+        <li>We will answer the quesiton, Where do we place our javascript code?</li>
+        <li>The Document object can be found at window.document</li>
+        <li>This is the document object that can be used to find individual elements in a webpage</li>
+        <li>We can get to an element by id using a special method, document.getElementById();</li>
+        <li>Within the parenthesis we will place the id surrounded by quotation marks</li>
+        <li>In the example case the id is title, document.getElementById("title");</li>
+        <li>Typing this in the console with output the element</li>
+        <li>example located in... examples/Lecture53</li>
+        <li>We can also place this within a console.log in our javascript script</li>
+        <li>First we include our javascript script in the head of our html file</li>
+        <li>hmm when we execute console.log(document.getElementById("title")); we return null...</li>
+        <li>This is because of where we are executing it... Its in the head before the element is defined
+        </li>
+        <li>The easiest way to fix this is to simply place at the end of the document, right before the closing body tag</li>
+        <li>The document object is an instance of HTMLDocument. You can look up all of the methods in the HTMLDocument class that may be able to help you with web application development.</li>
+      </ul>
+    </li>
+    <li>Lecture 53, Part 2: DOM Manipulation
+      <ul>
+        <li>The first thing we are going to do is add an event to our button in the example</li>
+        <li>onclick="sayHello();" placed in the opening tag of the button</li>
+        <li>We have to define this function in our script.js</li>
+        <li>function sayHello() {
+          cosole.log(
+            document.getElementById("name").value
+          );
+        }</li>
+        <li>The above doesn't do anything, we need to create a variable to store the name and create a message</li>
+        <li><pre><code>
+          function sayHello() {
+            var name =
+              document.getElementById("name").value;
+              var message = "Hello" + Name + "!";
+
+            document
+              .getElementById("content")
+              .textContent = message;
+          }
+        </pre></code></li>
+        <li>To make it an h2...</li>
+        <li><pre><code>
+          function sayHello() {
+            var name =
+              document.getElementById("name").value;
+              var message = "&lt;h2&gt;Hello" + Name + "!&lt;/h2&gt;";
+
+            document
+              .getElementById("content")
+              .innerHTML = message;
+          }
+        </pre></code></li>
+        <li>Now it renders as an h2 element</li>
+        <li>Armed with this alone, much can be implemented</li>
+        <li>Now lets make the title special if the name is "student"</li>
+        <li><pre><code>
+          if (name === "student") {
+            var title = 
+              document.querySelector("#title")
+              .textContent = title;
+            title += " & Lovin' it!";
+          }
+        </code></pre></li>
+        <li>Rather than using getElementById we are using querySelector which allows you to use css selectors</li>
+        <li>When we first execute we are setting the local variable title to the new title but not the value of the actual .textContent</li>
+        <li>We have to explicitly set .textContent = title</li>
+        <li><pre><code>
+          if (name === "student") {
+            var title = 
+              document.querySelector("#title")
+              .textContent = title;
+            title += " & Lovin' it!";
+            document
+              .querySelector("#title")
+              .textContent = title;
+          }
+        </code></pre></li>
+        <li>Since we are using querySelector we could also use "h1" in the querySelector rather than the title id.</li>
+        <li>If there were more than one h1 elements querySelector will take the first.</li>
+        <li>If you want all h1 elements you can use the document.querySelectorAll() method</li>
+      </ul>
+    </li>
+    <li>Lecture 54: Handling Events
+      <ul>
+        <li>event handlers are basically functions that you bind using specific methods to certain events that happen in the browser</li>
+        <li>placing an on..something in the html element is one option</li>
+        <li>There are consequences, mainly it "dirties" up your html code</li>
+        <li>There is another way called unobstrusive event binding in which the html doesn't need to know anything about it.</li>
+        <li><pre><code>
+          document.querySelector("button")
+            .addEventListener("click", sayHello);
+        </code></pre></li>
+        <li>There is a similar way to do this with the on..something method</li>
+        <li><pre><code>
+          document.querySelector("button")
+            .onclick = sayHello;
+        </code></pre></li>
+        <li>This gives more flexibility</li>
+        <li>You can make the name of the button change when it is clicked easily because the this object when the function is exectuted is now pointing to the right element</li>
+        <li>you can also use this to listen for the event DOMContentLoaded so that the script.js can be referenced in the head rather than the end of the document</li>
+      </ul>
+    </li>
+    <li>Lecture 55: The event Argument
+      <ul>
+        <li>log.console(event)... MouseEvent</li>
+        <li>If we open that event there are a ton of properties of this event</li>
+        <li>This is something passed in to every event handler</li>
+        <li>Looking at the event page of the mozilla developer page</li>
+      </ul>
+    </li>
+    <a href="#top">Back to Top</a>
+  </body>
+</html>
+
