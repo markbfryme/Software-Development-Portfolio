@@ -12,6 +12,7 @@
     <div><h2>Module 5: Building Web Applications with Javascript</h2></div>
     <div><a href="../site/">Home</a></div>
     <a href="#2022-03-18">| 2022-03-18 |</a>
+    <a href="#2022-03-19">| 2022-03-19 |</a>
     <br>
     <br id="2022-03-18">2022-03-18
     <li>Module 5: Building Web Applications with Javascript
@@ -130,7 +131,125 @@
         <li>If we open that event there are a ton of properties of this event</li>
         <li>This is something passed in to every event handler</li>
         <li>Looking at the event page of the mozilla developer page</li>
-        <li>stoped at 1:48</li>
+        <li><a href="developer.mozilla.org">developer.mozilla.org</a></li>
+        <li>keyboard events, mouse events  ...</li>
+        <li>mousemove</li>
+        <li><pre><code>
+          document.querySelector("body")
+            .addEventListener("mousemove",
+              function(event) {
+                if (event.shiftKey === true) {
+                  console.log("x: " + event.clientX);
+                  console.log("y: " + event.clientY);
+                }
+              }
+            );
+        </code></pre></li>
+        <li>The above code will log the mouse position if the shift key is held down</li>
+      </ul>
+    </li>
+    <a href="#top">Back to Top</a>
+    <br>
+    <br id="2022-03-19">2022-03-19
+    <li>Lesson 56: HTTP Basics
+      <ul>
+        <li>Language in which browser talks to the server</li>
+        <li>HTTP: HyperText Transfer Protocal</li>
+        <li>Based on request/response stateless protocol</li>
+        <li>Client (browser) opens a connection to a server</li>
+        <li>Client sends HTTP request for a resource</li>
+        <li>Server sends HTTP response to the client (w/resource)</li>
+        <li>Client closes connection to server</li>
+        <li>URN:
+          <ul>
+            <li>Uniform Resource Name</li>
+            <li>Uniquely identifies resource or name of resource</li>
+            <li>Does not tell us how to get the resource</li>
+            <li>Maintain unique names of courses with string from identifiers</li>
+            <li>example: "HTML/CSS/Javascript/Web Developers/Yaakov/Chaikin"</li>
+          </ul>
+        </li>
+        <li>URI
+          <ul>
+            <li>Uniquely identifies resource of location of resource</li>
+            <li>Does not necessarily tell us how to get the resource</li>
+            <li>Still doesn't tell us how/where to get the resource</li>
+            <li>example: /official_web_site/index.html</li>
+          </ul>
+        </li>
+        <li>URL:
+          <ul>
+            <li>Form of URI that provides info on how to get resources</li>
+            <li>example: http://www.mysite.com/official_web_site/index.html</li>
+          </ul>
+        </li>
+        <li>HTTP Request Structure (GET)
+          <ul>
+            <li>GET /index.html?firstName=Yaakov HTTP/1.1</li>
+            <li>GET is the Method</li>
+            <li>/index.html is the URI String</li>
+            <li>firstName=Yaakov is the Query String
+              <ul>
+                <li>name/value pairs separated by & Example: ?first=Yaakov&last=Chaikin</li>
+              </ul>
+            </li>
+            <li>HTTP/1.1 is the HTTP version</li>
+            <li>There's something strange about this command, its a URI not a URL</li>
+            <li>only issued after we are connected to a resource (website)</li>
+            <li>We are now asking with the protocol HTTP after we are already connected to the server</li>
+            <li>This is a GET command or request</li>
+          </ul>
+        </li>
+        <li>HTTP Methods
+          <ul>
+            <li>GET
+              <ul>
+                <li>Retrieves the resource</li>
+                <li>Data is passed to server as part of the URI ie query string</li>
+              </ul>
+            </li>
+            <li>POST
+              <ul>
+                <li>Sends data to server in order to be processed</li>
+                <li>Data is sent in the message body</li>
+              </ul>
+            </li>
+            <li>Many other methods not covered here</li>
+          </ul>
+        </li>
+        <li>HTTP Request Structure (POST)
+          <ul>
+            <li><pre><code>
+              POST /index.html HTTP/1.1
+              Host: coursera.org
+              Accept-Charset: utf-8
+              firstName=Yaakov...
+              ...
+              ...
+            </pre></code></li>
+          </ul>
+        </li>
+        <li>HTTP Response Structure
+          <ul>
+            <li><pre><code>
+              HTTP/1.1 200 OK
+              Date: Tue, 11 Aug 2004 19:00:01 GMT
+              Content-Type: text/html
+              ... html page here ...
+              ...
+              ...
+            </code></pre></li>
+            <li>HTTP Version Response, status code, English phrase describing status code all seperated by a single space</li>
+            <li>200 OK: Ok, here is the content you requested</li>
+            <li>404 Not Found: Server can't find the resource requested</li>
+            <li>403 Forbidden: Unauthenticated client tried to access a secure resource</li>
+            <li>500 Internal Server Error: Some unhandled error was raised on the server</li>
+            <li>If you are going to be doing client server communication you need to understand the basics of HTTP protocol</li>
+            <li>GET method sends data to server as part of the URL</li>
+            <li>POST method sends data as part of message body</li>
+            <li>Common Response codes: 200, 404, 403, 500, etc.</li>
+          </ul>
+        </li>
       </ul>
     </li>
     <a href="#top">Back to Top</a>
