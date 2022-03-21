@@ -13,6 +13,8 @@
     <div><a href="../site/">Home</a></div>
     <a href="#2022-03-18">| 2022-03-18 |</a>
     <a href="#2022-03-19">| 2022-03-19 |</a>
+    <a href="#2022-03-20">| 2022-03-20 |</a>
+    <a href="#2022-03-20">| 2022-03-21 |</a>
     <br>
     <br id="2022-03-18">2022-03-18
     <li>Module 5: Building Web Applications with Javascript
@@ -250,6 +252,97 @@
             <li>Common Response codes: 200, 404, 403, 500, etc.</li>
           </ul>
         </li>
+      </ul>
+    </li>
+    <a href="#top">Back to Top</a>
+    <br>
+    <br id="2022-03-20">2022-03-20
+    <li>Lecture 57, Part 1: AJAX Basics
+      <ul>
+        <li>AJAX stands for Asynchronous Javascript and XML
+          <ul>
+            <li>While AJAX started with XML, very few apps use XML with AJAX today</li>
+            <li>plain text (at times as html) or JSON is used instead</li>
+          </ul>
+        </li>
+        <li>Why AJAX? It allows small pieces of data to be requested with Javascript rather than requesting and receiving a full yet slightly modified webpage.</li>
+        <li>Faster Response, less bandwidth, nicer user experience</li>
+        <li>Synchronous: The execution of one programming instruction at a time</li>
+        <li>Can't start the execution of another until first is exectued</li>
+        <li>Asynchronous: Execution of more than one instruction at a time.</li>
+        <li>Asynchrounous instruction returns right away</li>
+        <li>The actual execution is done in a separate thread or process</li>
+        <li>If Javascript is synchronous how does AJAX work?
+          <ul>
+            <li>The Javascript engine in a web browser is synchronous</li>
+            <li>The HTTP Requestor is Asynchronous</li>
+            <li>Note: There are other components in a web broswer, Event Queue, webGL, HTML Rendering</li>
+            <li>Use a special object to make an AJAX request from the HTTP Requestor</li>
+            <li>At the same time we send a response handler function</li>
+            <li>Javascript doesn't wait on the response and keeps synchronously executing</li>
+            <li>Then a callback function is used to get the response from the HTTP Requestor...</li>
+          </ul>
+        </li>
+        <li></li>
+      </ul>
+    </li>
+    <a href="#top">Back to Top</a>
+    <br>
+    <br id="2022-03-21">2022-03-21
+    <li>Part 2: AJAX Basics
+      <ul>
+        <li>examples/Lecture57</li>
+        <li>We're going to get the name we want to say hello to from the server</li>
+        <li>We have a javascript file called ajax-utils.js which holds the javascript to make ajax calls</li>
+        <li>This script is referenced in our html before script.js since it is used in script.js</li>
+        <li>We have a simple text file locally to make sure we can pull data</li>
+        <li>ajax-utils.js holds a IIFE to wrap the entire code and passing it the window or global object</li>
+        <li>setup an object/namespace to attach utilities to ajaxUtils</li>
+        <li>First we have a function getRequestObject that returns an HTTP request object based on the type that are available from the browser this function is not attached to ajaxUtils</li>
+        <li>window.XMLHttpRequest is the most current request object, the others are very unlikely to be in use</li>
+        <li>We use this object to make requests. We return a "new XMLHttpRequest()" object.</li>
+        <li>We really only pulled it out as a separate function to have all of these if statements in a separate place.</li>
+        <li>the main function we care about is attached to ajaxUtils, ajaxUtils.sendGetRequest</li>
+        <li>arguments are requestUrl and responseHandler</li>
+        <li>first gets the request object</li>
+        <li>var request = getRequestObject();</li>
+        <li>set request.onreadystatechange to another function handleResponse(request, responseHandler) </li>
+        <li>We're not finished setting up the request</li>
+        <li>Set the open method request.open("GET", requestURL, true); the true makes it asynchronous</li>
+        <li>The nest line request.send(null) actually finally sends the request... everything else before this point was just setting up the request</li>
+        <li>The handleResponse function takes in the request and the responseHandler and makes sure we are in the request.readyState == 4, the last state, then we check if the request.status == 200. If those two conditions are true, we pass the request to the responseHandler... responseHandler(request)</li>
+        <li>We then expose the utility to the global object. global.$ajaxUtils = ajaxUtils;</li>
+      </ul>
+    </li>
+    <li>Lesson 57, Part 3: Ajax Basics
+      <ul>
+        <li>Now we'll look at script.js</li>
+        <li>ajax-utils sendGetRequest, we're passing a requestUrl and a response handler</li>
+        <li>first we notice that the script will only execute upon DOMContentLoaded</li>
+        <li>Use unobstrusive even binding...</li>
+        <li>May need to go back through all of Lecture 57 later</li>
+      </ul>
+    </li>
+    <li>Lecture 58: Processing JSON
+      <ul>
+        <li>What is JSON? JavaScript Object Notation
+          <ul>
+            <li>Lightweight data-interchange format</li>
+            <li>Simple textual representation of data</li>
+            <li>Easy for humans to read and write</li>
+            <li>Easy for machines to parse and generate</li>
+            <li>Completely independent of any language</li>
+          </ul>
+        </li>
+        <li>Subset of Javascript object literal syntax...but
+          <ul>
+            <li>Property names must be in double quotes</li>
+            <li>String values must be in double quotes</li>
+            <li>That's it!</li>
+          </ul>
+        </li>
+        <li>Syntax for everything else is exactly like for object literals</li>
+        <li>left of at 1:56</li>
       </ul>
     </li>
     <a href="#top">Back to Top</a>
