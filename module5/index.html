@@ -14,7 +14,8 @@
     <a href="#2022-03-18">| 2022-03-18 |</a>
     <a href="#2022-03-19">| 2022-03-19 |</a>
     <a href="#2022-03-20">| 2022-03-20 |</a>
-    <a href="#2022-03-20">| 2022-03-21 |</a>
+    <a href="#2022-03-21">| 2022-03-21 |</a>
+    <a href="#2022-03-22">| 2022-03-22 |</a>
     <br>
     <br id="2022-03-18">2022-03-18
     <li>Module 5: Building Web Applications with Javascript
@@ -343,6 +344,74 @@
         </li>
         <li>Syntax for everything else is exactly like for object literals</li>
         <li>left of at 1:56</li>
+      </ul>
+    </li>
+    <a href="#top">Back to Top</a>
+    <br>
+    <br id="2022-03-22">2022-03-22
+    <li>Lecture 58: Processing JSON, Cont'd
+      <ul>
+        <li>Typical string</li>
+        <li><pre><code>
+          {
+            "firstName": "Yaakov",
+            "lastName": "Chaikin",
+            "likesChineseFood": false,
+            "numberOfDisplays": 2
+          }
+        </code></pre></li>
+        <li>You can place this inside a variable like so, since JSON is just a string</li>
+        <li><pre><code>
+          var jsonString =
+          '{
+            "firstName": "Yaakov",
+            "lastName": "Chaikin",
+            "likesChineseFood": false,
+            "numberOfDisplays": 2
+          }';
+        </code></pre></li>
+        <li>JSON is NOT a Javascript Object Literal</li>
+        <li>JSON is just a string</li>
+        <li>The syntax of JSON is based on an object literal</li>
+        <li>Need to convert JSON into a JS object</li>
+        <li>convert from json string to object: var obj = JSON.parse(jsonString);</li>
+        <li>convert from object to json string: var str = JSON.stringify(obj);</li>
+        <li>jump to the code editor and redo previous example with JSON</li>
+        <li>examples/Lecture58</li>
+        <li>name.json holds the JSON string</li>
+        <li>...</li>
+        <li>Summary
+          <ul>
+            <li>JSON is a lightweight data representation</li>
+            <li>Great format for passing data from server to client and back</li>
+            <li>Syntax is based on Javascript object literal</li>
+            <li>But JSON is NOT JS object literal</li>
+            <li>JSON.parse to convert from JSON string to object</li>
+            <li>JSON.stringify to convert from object to JSON string</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Lecture 59: Fixing Mobile Nav Menu Automatic Collapse
+      <ul>
+        <li>Now were back to David Chu's China Bistro website</li>
+        <li>We're going to automatically collapse the menu using a javascript event handler</li>
+        <li><img src="2022-03-22 06_53_19-Lecture 59_ Fixing Mobile Nav Menu Automatic Collapse _ Coursera.png"></li>
+        <li>Dollar sign is a funciton in jquery $()</li>
+        <li>its the same as the document.addEventListener("DOMContentLoaded"...</li>
+        <li>it also serves as a query selector if you place something in quotes</li>
+        <li>so $("#navbarToggle").blur(function..) is the same as document.querySelector("#navbarToggle").addEventListener("blur</li>
+      </ul>
+    </li>
+    <li>Lecture 60: Dynamically Loading Home View Content
+      <ul>
+        <li>We're trying to move toward an SPA, single page application</li>
+        <li>We want all of the home page to be loaded dynamically</li>
+        <li>We wipe out index.html main-content section, id="main-content"</li>
+        <li>Now contained within home-snippet.html</li>
+        <li>in script.js we have an IIFE executed in the global window, we are exposing anything with the variable dc</li>
+        <li>Convenience function for inserting html...as targetElem.innerHTML</li>
+        <li>show loading icon showLoading function... ajax-loader.gif...</li>
       </ul>
     </li>
     <a href="#top">Back to Top</a>
