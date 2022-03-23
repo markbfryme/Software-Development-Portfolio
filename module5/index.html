@@ -16,6 +16,7 @@
     <a href="#2022-03-20">| 2022-03-20 |</a>
     <a href="#2022-03-21">| 2022-03-21 |</a>
     <a href="#2022-03-22">| 2022-03-22 |</a>
+    <a href="#2022-03-23">| 2022-03-23 |</a>
     <br>
     <br id="2022-03-18">2022-03-18
     <li>Module 5: Building Web Applications with Javascript
@@ -412,6 +413,62 @@
         <li>in script.js we have an IIFE executed in the global window, we are exposing anything with the variable dc</li>
         <li>Convenience function for inserting html...as targetElem.innerHTML</li>
         <li>show loading icon showLoading function... ajax-loader.gif...</li>
+        <li>ajaxload.info loading icons...there are others too</li>
+      </ul>
+    </li>
+    <a href="#top">Back to Top</a>
+    <br>
+    <br id="2022-03-23">2022-03-23
+    <li>Lecture 61, Part 1: Dynamically Loading Menu Categories View
+      <ul>
+        <li>We need the data for the menu categories</li>
+        <li>We have a heroku app... ruby on rails app</li>
+        <li>Become a Rails Developer on Coursera...</li>
+        <li>The course you are taking now is a part of it</li>
+        <li>data is hosted on herokuapp</li>
+        <li>This will eventually get hosted on github pages</li>
+        <li>Chrome developer tools > Network > categories.json shows you how the json will look</li>
+      </ul>
+    </li>
+    <li>Lecture 62, Part 2: Dynamically Loading Menu Categories View
+      <ul>
+        <li>We have a heroku app as JSON</li>
+        <li>Now we will go over the code that makes the AJAX request to the app, brings in the data as JSON, parses it and populates an html snippet and then is able to be inserted as HTML to populate the menu categories page</li>
+        <li>examples/Lecture62</li>
+        <li>categories-title-snippet.html</li>
+        <li>category-snippet.html</li>
+        <li>...</li>
+      </ul>
+    </li>
+    <li>Lecture 62, Part 3: Dynamically Loading Single Category View
+      <ul>
+        <li>examples/Lecture62</li>
+        <li>looking at category-snippet.html we want to look at the hook</li>
+        <li>davids-restaurant.herokuapp.com/menu_items.json?category=L</li>
+        <li>We append L or other to the base html to get to the right category</li>
+        <li>on the category menu we have special instructions and then the list of every item in that category</li>
+        <li>menu-item.html... inserting the name of the category and the special instructions</li>
+        <li>menuItemsUrl = base URL which we will append the categoryShort name to</li>
+        <li>note: all things default to JSON processing</li>
+        <li>double ajax</li>
+        <li>buildMenuItemsViewHtml to build up what we insert into html</li>
+        <li>We insert the title section, then a section with class row, then loop through the menu items</li>
+        <li>clearfix inserted after every second menu item... using remainder in the if statement</li>
+      </ul>
+    </li>
+    <li>Lecture 63: Changing 'active' Button Style Through Javascript
+      <ul>
+        <li>examples/Lecture63</li>
+        <li>We want the menu button to be in the active state</li>
+        <li>Create a function SwitchMenuToActive</li>
+        <li>remove the active class from the home button element and add it to the menu button element</li>
+      </ul>
+    </li>
+    <li>Course Wrapup
+      <ul>
+        <li>Where to go from here: He recommends taking the course "Single Page Web Applications with Angular.JS"</li>
+        <li>So much functionality with very little code using Angular...</li>
+        <li>Module 5 Assignment: <a href="https://github.com/jhu-ep-coursera/fullstack-course4/blob/master/assignments/assignment5/Assignment-5.md" target="blank">Assignment 5</a></li>
       </ul>
     </li>
     <a href="#top">Back to Top</a>
