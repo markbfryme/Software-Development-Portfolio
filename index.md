@@ -1,6 +1,6 @@
 ## Mark Fry
 
-You can use the [editor on GitHub](https://github.com/markbfryme/coursera-test/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+I recently audited the Coursera course "HTML, CSS, and Javascript for Web Developers" my notes and projects can be found below: [Course Notes and Project Webpage](https://markbfryme.github.io/coursera-test/site/)
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
